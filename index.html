@@ -1,0 +1,1038 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hẹn em đi chơi 💕</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+ min-height:100vh;overflow:hidden;display:flex;align-items:center;
+ justify-content:center;font-family:"Segoe UI",Arial,sans-serif;
+ background:linear-gradient(135deg,#ffd6e7,#ffeaf3,#ffc1d9)
+}
+
+.card{
+ width:min(90%,550px);max-height:90vh;overflow:auto;padding:35px 25px;
+ text-align:center;border-radius:30px;background:#ffffffe6;
+ box-shadow:0 20px 50px #dc467840;backdrop-filter:blur(10px);
+ animation:show .35s ease
+}
+
+@keyframes show{
+ from{opacity:0;transform:scale(.96) translateY(10px)}
+ to{opacity:1;transform:scale(1) translateY(0)}
+}
+
+h1{
+ color:#e83e78;font-size:clamp(23px,5vw,32px);
+ line-height:1.45;margin-bottom:18px
+}
+
+img{
+ width:140px;height:140px;object-fit:cover;border-radius:50%;
+ border:5px solid white;box-shadow:0 8px 25px #dc46784d;
+ margin-bottom:18px
+}
+
+button{
+ border:0;border-radius:50px;padding:13px 30px;
+ font-size:17px;font-weight:700;cursor:pointer
+}
+
+.pink,#yes{
+ color:white;background:linear-gradient(135deg,#ff4f91,#ff78a9);
+ box-shadow:0 8px 20px #ff4f9159;
+ transition:transform .2s,box-shadow .2s
+}
+
+.pink:hover,#yes:hover{
+ transform:scale(1.06);
+ box-shadow:0 10px 25px #ff4f9166
+}
+
+
+/* TRANG 1 */
+
+.button-row{
+ width:min(100%,400px);height:60px;margin:18px auto 0;
+ padding:0 10px;display:flex;align-items:center;
+ justify-content:space-between;position:relative
+}
+
+.button-side{
+ width:45%;display:flex;align-items:center;
+ justify-content:center
+}
+
+.button-side:first-child{
+ animation:yesIn .7s cubic-bezier(.2,.8,.2,1) both
+}
+
+@keyframes yesIn{
+ from{opacity:0;transform:translateX(-35px) scale(.8)}
+ to{opacity:1;transform:translateX(0) scale(1)}
+}
+
+#no{
+ position:fixed;z-index:20;min-width:116px;
+ color:#a06b80;background:#f1dce5;
+ pointer-events:none;box-shadow:0 6px 15px #96506e26
+}
+
+#no.no-enter{
+ animation:noIn .7s cubic-bezier(.2,.8,.2,1) both
+}
+
+@keyframes noIn{
+ from{opacity:0;transform:translateX(35px) scale(.8)}
+ to{opacity:1;transform:translateX(0) scale(1)}
+}
+
+
+/* CHUNG */
+
+.sub,.confirm{
+ color:#9d5874;font-size:18px;
+ line-height:1.7;margin-bottom:22px
+}
+
+.inputs{width:min(100%,360px);margin:auto}
+
+label{
+ display:block;text-align:left;color:#9d5874;
+ font-weight:600;margin:12px 0 6px
+}
+
+input,select{
+ width:100%;height:50px;padding:0 14px;
+ border:2px solid #f3bfd2;border-radius:15px;
+ background:#fff8fb;color:#9d5874;font-size:16px;outline:0
+}
+
+input:focus,select:focus{
+ border-color:#ff8eb5;
+ box-shadow:0 0 0 3px #ff8eb522
+}
+
+.confirm{
+ display:none;color:#e83e78;
+ font-weight:700;margin:15px 0 0
+}
+
+
+/* TRANG 4 */
+
+.foods{
+ width:min(100%,440px);display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:10px;margin:0 auto 18px
+}
+
+.food{
+ padding:13px 5px;border-radius:17px;
+ background:#fff4f8;border:2px solid #f5c7d8;
+ color:#9d5874;transition:.2s
+}
+
+.food:hover{
+ transform:translateY(-3px);
+ border-color:#ff78a9
+}
+
+.food span{display:block}
+.icon{font-size:32px;margin-bottom:5px}
+.other{margin-bottom:15px}
+
+
+/* TRANG 5 */
+
+.finalText{
+ color:#9d5874;font-size:18px;
+ line-height:1.8;margin-bottom:25px
+}
+
+.highlight{
+ color:#e83e78;font-weight:700
+}
+
+
+/* TRANG 6 */
+
+.fee-icon,.pay-icon{
+ font-size:70px;margin-bottom:12px;
+ animation:float 2s ease-in-out infinite
+}
+
+@keyframes float{
+ 0%,100%{transform:translateY(0) rotate(-3deg)}
+ 50%{transform:translateY(-7px) rotate(3deg)}
+}
+
+.fee-title{margin-bottom:10px}
+
+.fee-text{
+ color:#9d5874;font-size:17px;
+ line-height:1.65;margin-bottom:20px
+}
+
+.fee-box{
+ width:min(100%,400px);margin:0 auto 7px;
+ padding:18px 20px;border:2px solid #f3bfd2;
+ border-radius:18px;background:#fff7fa;
+ box-shadow:inset 0 2px 8px #e83e7810
+}
+
+.fee-label{
+ display:block;color:#9d5874;
+ font-size:14px;margin-bottom:6px
+}
+
+.fee-price{
+ color:#e83e78;font-size:clamp(24px,6vw,32px);
+ font-weight:800
+}
+
+.fee-note{
+ color:#b27b91;font-size:13px;
+ font-style:italic;margin-bottom:20px
+}
+
+.back{
+ display:block;margin:18px auto 0;
+ padding:5px 10px;background:transparent;
+ color:#a06b80;box-shadow:none;font-size:14px
+}
+
+.back span:last-child{display:none}
+.back:hover span:first-child{display:none}
+.back:hover span:last-child{display:inline}
+
+
+/* TRANG 7 */
+
+.pay-icon{
+ font-size:70px
+}
+
+.qr-box{
+ width:220px;height:220px;margin:10px auto 12px;
+ padding:12px;background:white;border-radius:20px;
+ box-shadow:0 8px 25px #dc467830
+}
+
+.qr-box img{
+ width:100%;height:100%;margin:0;
+ border:0;border-radius:5px;box-shadow:none
+}
+
+.scan-text{
+ color:#e83e78;font-size:18px;
+ font-weight:700;margin-bottom:12px
+}
+
+.timer{
+ color:#a06b80;font-size:14px
+}
+
+#countdown{
+ display:inline-block;min-width:22px;
+ color:#e83e78;font-size:20px;font-weight:800
+}
+
+
+/* VIDEO */
+
+#videoArea{display:none}
+
+.video-title{
+ color:#e83e78;font-size:20px;
+ font-weight:700;margin-bottom:15px
+}
+
+.video-box{
+ width:100%;aspect-ratio:16/9;
+ overflow:hidden;border-radius:18px;
+ background:#111;box-shadow:0 10px 30px #dc467840;
+ margin-bottom:18px
+}
+
+.video-box iframe{
+ width:100%;height:100%;border:0
+}
+
+
+/* BIÊN LAI */
+
+#receipt{
+ display:none;
+ animation:show .5s ease
+}
+
+.success-icon{
+ font-size:65px;margin-bottom:10px;
+ animation:pop .6s ease
+}
+
+@keyframes pop{
+ 0%{transform:scale(.3);opacity:0}
+ 70%{transform:scale(1.15)}
+ 100%{transform:scale(1);opacity:1}
+}
+
+.receipt{
+ margin:15px auto 20px;padding:18px;
+ border:2px dashed #f3bfd2;border-radius:18px;
+ background:#fff7fa;color:#9d5874;line-height:1.8
+}
+
+.receipt b{color:#e83e78}
+
+
+/* ẨN */
+
+#success,#schedule,#food,#final,#fee,#afterFee,#foodOk{
+ display:none
+}
+
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+ .card{padding:28px 18px}
+ img{width:115px;height:115px}
+
+ .button-row{
+  width:min(100%,330px);padding:0
+ }
+
+ .button-side{width:44%}
+
+ button{
+  padding:12px 24px;
+  font-size:16px
+ }
+
+ #no{min-width:108px}
+
+ .foods{gap:7px}
+ .food{padding:11px 3px}
+ .icon{font-size:28px}
+
+ .pay-icon,.success-icon{font-size:60px}
+
+ .qr-box{
+  width:190px;height:190px
+ }
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- TRANG 1 -->
+
+<div class="card" id="question">
+
+ <img src="https://placehold.co/400x400/ffd6e7/e83e78?text=YOUR+PHOTO">
+
+ <h1>
+  Anh có thể hẹn em<br>
+  đi chơi vào ngày mai không?
+ </h1>
+
+ <p class="sub">
+  Anh có một lời mời nhỏ dành cho em... 🥺💕
+ </p>
+
+ <div class="button-row">
+
+  <div class="button-side">
+   <button id="yes" class="pink">YES 💕</button>
+  </div>
+
+  <div class="button-side"></div>
+
+ </div>
+</div>
+
+<button id="no" class="no-enter">NO 😈</button>
+
+
+<!-- TRANG 2 -->
+
+<div class="card" id="success">
+
+ <h1>
+  KHOAN ĐÃ EM THỰC SỰ BẤM YES Ư😭
+ </h1>
+
+ <p class="sub">
+  Anh đã thực sự nghĩ em sẽ từ chối 😢
+ </p>
+
+ <button id="okay" class="pink">
+  okay okay
+ </button>
+
+</div>
+
+
+<!-- TRANG 3 -->
+
+<div class="card" id="schedule">
+
+ <img src="https://placehold.co/400x400/ffd6e7/e83e78?text=YOUR+PHOTO">
+
+ <h1>Vậy...khi nào em rảnh???</h1>
+
+ <div class="inputs">
+
+  <label>Chọn một ngày 📅</label>
+  <input type="date" id="date">
+
+  <label>Muốn mấy giờ nè ⏰</label>
+
+  <select id="time">
+   <option value="">Chọn giờ</option>
+  </select>
+
+  <button id="book" class="pink" style="margin-top:18px">
+   Đặt lịch 💕
+  </button>
+
+  <p id="confirm" class="confirm"></p>
+
+ </div>
+</div>
+
+
+<!-- TRANG 4 -->
+
+<div class="card" id="food">
+
+ <img src="https://placehold.co/400x400/ffd6e7/e83e78?text=YOUR+PHOTO">
+
+ <h1>Em muốn ăn gì hôm đó ne 🍽️</h1>
+
+ <div class="foods">
+
+  <button class="food">
+   <span class="icon">🍕</span>
+   <span>Pizza</span>
+  </button>
+
+  <button class="food">
+   <span class="icon">🍔</span>
+   <span>Hamburger</span>
+  </button>
+
+  <button class="food">
+   <span class="icon">🍝</span>
+   <span>Mì Ý</span>
+  </button>
+
+  <button class="food">
+   <span class="icon">🍗</span>
+   <span>Gà rán</span>
+  </button>
+
+  <button class="food">
+   <span class="icon">🍜</span>
+   <span>Phở</span>
+  </button>
+
+  <button class="food">
+   <span class="icon">🍚</span>
+   <span>Cơm tấm</span>
+  </button>
+
+ </div>
+
+ <input
+  class="other"
+  id="other"
+  type="text"
+  placeholder="Hoặc em muốn món nào khác..."
+ >
+
+ <button id="foodOk" class="pink">
+  OK 💕
+ </button>
+
+</div>
+
+
+<!-- TRANG 5 -->
+
+<div class="card" id="final">
+
+ <img src="https://placehold.co/400x400/ffd6e7/e83e78?text=YOUR+PHOTO">
+
+ <h1>
+  Cảm ơn em đã lên lịch hẹn ngày
+  <span id="finalDate" class="highlight"></span>
+  lúc
+  <span id="finalTime" class="highlight"></span>.
+  Anh sẽ đón em vào ngày ấy nên hãy chuẩn bị sẵn sàng 🏍️
+ </h1>
+
+ <p class="finalText">
+  Rất vui vì công chúa đã lên lịch đi chơi với anh,
+  anh rất mong chờ ngày đó sẽ đến thật nhanh ❤️
+ </p>
+
+ <button id="finalOk" class="pink">
+  Okay 💕
+ </button>
+
+</div>
+
+
+<!-- TRANG 6 -->
+
+<div class="card" id="fee">
+
+ <div class="fee-icon">💳</div>
+
+ <h1 class="fee-title">
+  Một chút lệ phí
+ </h1>
+
+ <p class="fee-text">
+  Để chắc chắn công chúa đã lên lịch hẹn,
+  xin hãy thanh toán 1 khoản lệ phí nhỏ
+  để tiếp tục đặt lịch hẹn.
+ </p>
+
+ <div class="fee-box">
+
+  <span class="fee-label">
+   Phí lên lịch hẹn hò
+  </span>
+
+  <span class="fee-price">
+   500.000.000đ
+  </span>
+
+ </div>
+
+ <p class="fee-note">
+  Phí dịch vụ đặt lịch + phí ăn uống + phí xăng xe 😂
+ </p>
+
+ <button id="feeConfirm" class="pink">
+  Confirm
+ </button>
+
+ <button class="back" id="back">
+  <span>Go back</span>
+  <span>Có cái nịt 😁</span>
+ </button>
+
+</div>
+
+
+<!-- TRANG 7 -->
+
+<div class="card" id="afterFee">
+
+ <div id="payment">
+
+  <div class="pay-icon">💳</div>
+
+  <h1>
+   Thanh toán lệ phí 💸
+  </h1>
+
+  <p class="sub">
+   Vui lòng quét mã QR bên dưới để hoàn tất
+   thủ tục đặt lịch hẹn của công chúa 🥺
+  </p>
+
+  <div class="qr-box">
+   <img id="qr" alt="QR thanh toán">
+  </div>
+
+  <p class="scan-text">
+   📱 Quét mã để thanh toán
+  </p>
+
+  <p class="timer">
+   Hệ thống sẽ tự động xác nhận sau
+   <span id="countdown">10</span>
+   giây...
+  </p>
+
+ </div>
+
+
+ <!-- VIDEO -->
+
+ <div id="videoArea">
+
+  <p class="video-title">
+   🔐 Đang xác nhận giao dịch...
+  </p>
+
+  <div class="video-box">
+
+   <iframe
+    id="youtube"
+    allow="autoplay; encrypted-media; picture-in-picture"
+    allowfullscreen>
+   </iframe>
+
+  </div>
+
+  <p class="sub">
+   Vui lòng chờ hệ thống xác nhận... 😂
+  </p>
+
+ </div>
+
+
+ <!-- GIAO DỊCH HOÀN TẤT -->
+
+ <div id="receipt">
+
+  <div class="success-icon">
+   🎉
+  </div>
+
+  <h1>
+   Giao dịch hoàn tất! 😎
+  </h1>
+
+  <div class="receipt">
+
+   🧾 <b>BIÊN LAI ĐẶT LỊCH HẸN</b>
+
+   <br><br>
+
+   Khách hàng:
+   <b>Công chúa 👸</b>
+
+   <br>
+
+   Dịch vụ:
+   <b>Đi chơi với người yêu ❤️</b>
+
+   <br>
+
+   Lệ phí:
+   <b>500.000.000đ</b>
+
+   <br>
+
+   Trạng thái:
+   <b>ĐÃ BỊ LỪA 😂</b>
+
+  </div>
+
+  <p class="finalText">
+   Rất cảm ơn công chúa đã đặt lịch hẹn tại
+   <span class="highlight">
+    Công ty TNHH Một Thành Viên
+    Hẹn Hò & Ăn Uống
+   </span>
+   😂
+  </p>
+
+  <p class="sub">
+   Chúc quý khách có một buổi hẹn thật vui vẻ
+   và xin đừng yêu cầu hoàn tiền ❤️
+  </p>
+
+ </div>
+
+</div>
+
+
+<script>
+
+const $=id=>document.getElementById(id);
+
+const no=$("no");
+const yes=$("yes");
+const question=$("question");
+const success=$("success");
+const schedule=$("schedule");
+const food=$("food");
+const final=$("final");
+const fee=$("fee");
+const afterFee=$("afterFee");
+
+
+/* ==============================
+   CẤU HÌNH PRANK
+   ============================== */
+
+const VIDEO_ID="dQw4w9WgXcQ";
+
+/* 
+   Sau khi video xuất hiện,
+   bao nhiêu giây thì hiện "Giao dịch hoàn tất!"
+*/
+const RECEIPT_DELAY=5;
+
+
+/* ============================== */
+
+let mx=-1000,my=-1000,x=0,y=0;
+let ready=false,last=0;
+
+const texts=[
+ "Không được đâu 😈",
+ "Bắt được em đi 😜",
+ "Không cho chọn đâu 💕",
+ "Thử lại xem 😏",
+ "NO chạy mất rồi 🏃‍♀️",
+ "Ấn YES đi mà 🥺",
+ "Em không thoát được đâu 💗",
+ "Hông cho bấm đâu 😝",
+ "YES đi màaa ❤️",
+ "Không có cửa đâu 😈"
+];
+
+
+/* NO NÉ CHUỘT */
+
+document.addEventListener("mousemove",e=>{
+ mx=e.clientX;
+ my=e.clientY;
+});
+
+
+function escapeNo(){
+
+ if(!ready){
+  requestAnimationFrame(escapeNo);
+  return;
+ }
+
+ const r=no.getBoundingClientRect();
+ const cx=x+r.width/2;
+ const cy=y+r.height/2;
+
+ let dx=cx-mx;
+ let dy=cy-my;
+ const d=Math.hypot(dx,dy);
+
+ if(d<280){
+
+  if(d<.1){
+   dx=1;
+   dy=0;
+  }else{
+   dx/=d;
+   dy/=d;
+  }
+
+  const speed=
+   4.5*(.6+Math.max(0,1-d/250)*1.5);
+
+  x+=dx*speed;
+  y+=dy*speed;
+
+  x=Math.max(
+   20,
+   Math.min(x,innerWidth-r.width-20)
+  );
+
+  y=Math.max(
+   20,
+   Math.min(y,innerHeight-r.height-20)
+  );
+
+  no.style.left=x+"px";
+  no.style.top=y+"px";
+
+  if(Date.now()-last>800){
+
+   no.textContent=
+    texts[Math.floor(Math.random()*texts.length)];
+
+   last=Date.now();
+  }
+ }
+
+ requestAnimationFrame(escapeNo);
+}
+
+
+/* ĐẶT NO CẠNH YES */
+
+window.onload=()=>{
+
+ const row=document.querySelector(".button-row");
+ const rr=row.getBoundingClientRect();
+ const yr=yes.getBoundingClientRect();
+ const nr=no.getBoundingClientRect();
+
+ x=rr.right-rr.width*.1-nr.width;
+ y=yr.top+(yr.height-nr.height)/2;
+
+ x=Math.max(
+  10,
+  Math.min(x,innerWidth-nr.width-10)
+ );
+
+ y=Math.max(
+  10,
+  Math.min(y,innerHeight-nr.height-10)
+ );
+
+ no.style.left=x+"px";
+ no.style.top=y+"px";
+
+ ready=true;
+ requestAnimationFrame(escapeNo);
+};
+
+
+window.onresize=()=>{
+
+ const r=no.getBoundingClientRect();
+
+ x=Math.max(
+  10,
+  Math.min(x,innerWidth-r.width-10)
+ );
+
+ y=Math.max(
+  10,
+  Math.min(y,innerHeight-r.height-10)
+ );
+};
+
+
+/* TRANG 1 → 2 */
+
+yes.onclick=()=>{
+
+ no.style.display="none";
+ question.style.display="none";
+ success.style.display="block";
+};
+
+
+/* TRANG 2 → 3 */
+
+$("okay").onclick=()=>{
+
+ success.style.display="none";
+ schedule.style.display="block";
+};
+
+
+/* TẠO GIỜ */
+
+for(let h=9;h<=17;h++){
+
+ for(let m=0;m<60;m+=30){
+
+  if(h===17&&m)continue;
+
+  const hour=h>12?h-12:h;
+  const period=h>=12?"PM":"AM";
+  const value=
+   `${hour}:${m?"30":"00"} ${period}`;
+
+  $("time").add(
+   new Option(value,value)
+  );
+ }
+}
+
+
+/* NGÀY TỐI THIỂU */
+
+const now=new Date();
+
+$("date").min=
+ `${now.getFullYear()}-${
+  String(now.getMonth()+1).padStart(2,"0")
+ }-${
+  String(now.getDate()).padStart(2,"0")
+ }`;
+
+
+/* TRANG 3 → 4 */
+
+$("book").onclick=()=>{
+
+ const d=$("date").value;
+ const t=$("time").value;
+
+ if(!d){
+
+  $("confirm").style.display="block";
+  $("confirm").textContent=
+   "Chọn ngày đi chơi trước nha 🥺";
+
+  return;
+ }
+
+ if(!t){
+
+  $("confirm").style.display="block";
+  $("confirm").textContent=
+   "Chọn giờ nữa nha ⏰";
+
+  return;
+ }
+
+ const [y,m,day]=d.split("-");
+
+ $("confirm").style.display="block";
+
+ $("confirm").innerHTML=
+  `Chốt kèo ngày ${day}/${m}/${y}
+   lúc ${t} nhé! 💕`;
+
+ setTimeout(()=>{
+
+  schedule.style.display="none";
+  food.style.display="block";
+
+ },2000);
+};
+
+
+/* TRANG 4 → 5 */
+
+function showFinal(){
+
+ const d=$("date").value;
+ const t=$("time").value;
+ const [y,m,day]=d.split("-");
+
+ $("finalDate").textContent=
+  `${day}/${m}/${y}`;
+
+ $("finalTime").textContent=t;
+
+ food.style.display="none";
+ final.style.display="block";
+}
+
+
+document.querySelectorAll(".food").forEach(button=>{
+ button.onclick=showFinal;
+});
+
+
+/* MÓN KHÁC */
+
+$("other").oninput=()=>{
+
+ $("foodOk").style.display=
+  $("other").value.trim()
+   ?"inline-block"
+   :"none";
+};
+
+
+$("foodOk").onclick=()=>{
+
+ if($("other").value.trim())
+  showFinal();
+};
+
+
+/* TRANG 5 → 6 */
+
+$("finalOk").onclick=()=>{
+
+ final.style.display="none";
+ fee.style.display="block";
+};
+
+
+/* GO BACK */
+
+$("back").onclick=e=>{
+ e.preventDefault();
+};
+
+
+/* TRANG 6 → 7 */
+
+$("feeConfirm").onclick=()=>{
+
+ fee.style.display="none";
+ afterFee.style.display="block";
+
+ startPayment();
+};
+
+
+/* QR + ĐẾM NGƯỢC */
+
+function startPayment(){
+
+ const qr=$("qr");
+
+ qr.src=
+  "https://api.qrserver.com/v1/create-qr-code/?size=500x500&data="
+  +encodeURIComponent(
+   "https://www.youtube.com/watch?v="+VIDEO_ID
+  );
+
+ let seconds=10;
+
+ $("countdown").textContent=seconds;
+
+ const timer=setInterval(()=>{
+
+  seconds--;
+
+  $("countdown").textContent=seconds;
+
+  if(seconds<=0){
+
+   clearInterval(timer);
+   showVideo();
+
+  }
+
+ },1000);
+}
+
+
+/* VIDEO → GIAO DỊCH HOÀN TẤT */
+
+function showVideo(){
+
+ $("payment").style.display="none";
+ $("videoArea").style.display="block";
+
+ $("youtube").src=
+  "https://www.youtube.com/embed/"
+  +VIDEO_ID
+  +"?autoplay=1&mute=1&rel=0";
+
+
+ /* 
+    CHỈ CẦN ĐỔI RECEIPT_DELAY
+    để chọn thời gian video xuất hiện.
+ */
+ setTimeout(()=>{
+
+  $("videoArea").style.display="none";
+  $("receipt").style.display="block";
+
+ },RECEIPT_DELAY*1000);
+}
+
+</script>
+
+</body>
+</html>
+
